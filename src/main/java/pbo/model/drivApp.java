@@ -1,3 +1,6 @@
+//12S23018- Early Sembiring //
+//12S23032-Seprian siagian
+
 package pbo.model;
 
 import java.util.*;

@@ -1,22 +1,30 @@
-package pbo.model;
 
-import javax.persistence.*;
+package pbo.model;
+//12S23018- Early Sembiring //
+//12S23032-Seprian siagian
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "enrollment")
-
 public class Enrollment {
+
     private static int nextId = 1;
+
     @Id
     @Column(name = "id", nullable = false, length = 25)
     private int id = 0;
 
     @Column(name = "student_id", nullable = false, length = 25)
     private String studentId;
+
     @Column(name = "course_id", nullable = false, length = 25)
     private String courseId;
 
     public Enrollment() {
+       
     }
 
     public Enrollment(String studentId, String courseId) {
@@ -48,5 +56,4 @@ public class Enrollment {
     public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
-
 }

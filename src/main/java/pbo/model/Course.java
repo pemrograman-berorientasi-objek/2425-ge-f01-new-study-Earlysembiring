@@ -1,46 +1,57 @@
+//12S23018- Early Sembiring //
+//12S23032-Seprian siagian
+
 package pbo.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+//12S23013-Andika Nadadap//
+//12S23033-Oloan Nainggolan//
 @Entity
 @Table(name = "course")
 public class Course {
+
     @Id
     @Column(name = "course_id", nullable = false, length = 255)
-    private String courseId;
+    private String kode;
 
     @Column(name = "course_name", nullable = false, length = 255)
-    private String courseName;
+    private String nama;
 
     @Column(name = "semester", nullable = false, length = 25)
     private int semester;
+
     @Column(name = "credit", nullable = false, length = 25)
-    private int credit;
-  
-    public Course() {}
-    public Course(String courseId, String courseName, int semester, int credit) {
-        this.courseId = courseId;
-        this.courseName = courseName;
+    private int kredit;
+
+    public Course() {
+        
+    }
+
+    public Course(String kode, String nama, int semester, int kredit) {
+        this.kode = kode;
+        this.nama = nama;
         this.semester = semester;
-        this.credit = credit;
+        this.kredit = kredit;
     }
 
-
-    public String getCourseId() {
-        return courseId;
+    public String getKode() {
+        return kode;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
+    public void setKode(String kode) {
+        this.kode = kode;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public String getNama() {
+        return nama;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
     public int getSemester() {
@@ -51,19 +62,16 @@ public class Course {
         this.semester = semester;
     }
 
-    public int getCredit() {
-        return credit;
+    public int getKredit() {
+        return kredit;
     }
 
-    public void setCredit(int credit) {
-        this.credit = credit;
+    public void setKredit(int kredit) {
+        this.kredit = kredit;
     }
 
     @Override
     public String toString() {
-        return courseId + "|" + courseName + "|" + semester + "|" + credit;
+        return kode + "|" + nama + "|" + semester + "|" + kredit;
     }
-
-    
-
 }

@@ -1,57 +1,71 @@
+
 package pbo.model;
-import javax.persistence.*;
+//12S23018- Early Sembiring //
+//12S23032-Seprian siagian
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "student")
 public class Student {
+    
+    private static int nextId = 1;
+
     @Id
-    @Column(name = "student_id", nullable = false, length = 255)
-    private String studentId;
+    @Column(name = "id", nullable = false, length = 25)
+    private int id = 0;
 
-    @Column(name = "student_name", nullable = false, length = 255)
+    @Column(name = "nim", nullable = false, length = 25)
+    private String nim;
 
-    private String studentName;
+    @Column(name = "nama", nullable = false, length = 50)
+    private String nama;
 
-    @Column(name = "study_program", nullable = false, length = 25)
-    private String studyProgram;
+    @Column(name = "prodi", nullable = false, length = 50)
+    private String prodi;
 
     public Student() {
-
+        
     }
 
-    public Student(String studentId, String studentName, String studyProgram) {
-        this.studentId = studentId;
-        this.studentName = studentName;
-        this.studyProgram = studyProgram;
+    public Student(String nim, String nama, String prodi) {
+        this.id = nextId++;
+        this.nim = nim;
+        this.nama = nama;
+        this.prodi = prodi;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public int getId() {
+        return id;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getNim() {
+        return nim;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setNim(String nim) {
+        this.nim = nim;
     }
 
-    public String getStudyProgram() {
-        return studyProgram;
+    public String getNama() {
+        return nama;
     }
 
-    public void setStudyProgram(String studyProgram) {
-        this.studyProgram = studyProgram;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    @Override
-    public String toString() {
-        return studentId + "|" + studentName + "|" + studyProgram;
+    public String getProdi() {
+        return prodi;
     }
 
+    public void setProdi(String prodi) {
+        this.prodi = prodi;
+    }
 }
