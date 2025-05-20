@@ -2,6 +2,7 @@ package pbo.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "student")
 public class Student {
     @Id
     @Column(name = "student_id", nullable = false, length = 255)
@@ -15,6 +16,7 @@ public class Student {
     private String studyProgram;
 
     public Student() {
+
     }
 
     public Student(String studentId, String studentName, String studyProgram) {
