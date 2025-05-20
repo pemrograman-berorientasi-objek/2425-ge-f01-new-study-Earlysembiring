@@ -70,6 +70,11 @@ public class Course {
         this.kredit = kredit;
     }
 
+    // Tambahkan getter untuk kebutuhan drivApp
+    public String getCourseId() {
+        return this.kode;
+    }
+
     @Override
     public String toString() {
         return kode + "|" + nama + "|" + semester + "|" + kredit;

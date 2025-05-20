@@ -1,4 +1,3 @@
-
 package pbo.model;
 //12S23018- Early Sembiring //
 //12S23032-Seprian siagian
@@ -67,5 +66,10 @@ public class Student {
 
     public void setProdi(String prodi) {
         this.prodi = prodi;
+    }
+
+    // Tambahkan getter untuk kebutuhan drivApp
+    public String getStudentId() {
+        return this.nim;
     }
 }
