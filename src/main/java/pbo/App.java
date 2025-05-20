@@ -40,8 +40,8 @@ public class App {
           case "course-add":
             drivApp.createCourse(split[1], split[2], Integer.parseInt(split[3]), Integer.parseInt(split[4]));
             break;
-          case "course-show-all":   //bagian dhino
-            drivApp.ShowCourse();
+          case "course-show-all":               
+          drivApp.ShowCourse();
             break;
           // enroll
           case "enroll":
